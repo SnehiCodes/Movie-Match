@@ -1,0 +1,127 @@
+/* General Styles */
+body {
+    background-color: #ebb660; /* Light Peach Background */
+    font-family: 'Comic Sans MS', 'Poppins', sans-serif;
+}
+
+.movie {
+    color: #fff;
+    margin-left: auto;
+    margin-right: auto;
+    resize: none;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.movie-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.movie-content > div {
+    background-color: #ff69b4; /* Bright Pink */
+    padding: 15px;
+    border-radius: 15px;
+    box-shadow: 5px 5px 10px rgb(247, 156, 156);
+    transition: transform 0.3s;
+}
+
+.movie-content > div:hover {
+    transform: scale(1.05);
+}
+
+/* Buttons */
+.btn-block {
+    width: 200px;
+    text-align: center;
+    margin: 20px auto;
+    background-color: #ff4500; /* Orange */
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.btn-block:hover {
+    background-color: #ff6347; /* Lighter Orange */
+}
+
+/* Header */
+h1 {
+    font-family: 'Fredoka One', cursive;
+    color: #ff0000; /* Red */
+    font-size: 50px;
+    text-align: center;
+    margin-top: 30px;
+    text-shadow: 3px 3px 8px #ff6347;
+}
+
+/* Details Section */
+#details {
+    margin-left: 50px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 5px 5px 15px rgb(118, 217, 247);
+}
+
+/* Footer */
+.footer {
+    color: #ff4500;
+    text-align: right;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    font-size: 14px;
+}
+
+/* Card Hover Effect */
+.card {
+    background-color: #ffcc00;
+    border-radius: 20px;
+    padding: 15px;
+    transition: 0.3s;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.card:hover {
+    transform: scale(1.08);
+    background-color: #ffb300;
+    cursor: pointer;
+}
+
+/* Fun Loader */
+#loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.9) url("../static/loader.gif") no-repeat center;
+    background-size: 150px;
+    z-index: 999;
+    display: none;
+    animation: spin 1s infinite linear;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Media Queries */
+@media only screen and (max-width: 650px) {
+    .movie-content {
+        flex-direction: column;
+        align-items: center;
+    }
+    .btn-block {
+        width: 100%;
+    }
+}
